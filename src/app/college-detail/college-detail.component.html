@@ -12,22 +12,22 @@
         </div>
         <div class="col-lg-8 cont middler">
             <i><h3 class="contDet1">College Details :</h3></i>
-            <h1 class="contDet" >Acronym : {{ college.c_IDNo }}</h1>
-            <h1 class="contDet" >Email : {{ college.c_email }} </h1>
-            <h1 class="contDet" >Phone No. : {{ college.c_phoneNo }} </h1>
+            <h1 class="contDet" >Acronym : <button mat-raised-button color="warn"><h3>{{ college.c_IDNo }}</h3></button></h1>
+            <h1 class="contDet" >Email : <button mat-raised-button color="warn"><h3>{{ college.c_email }}</h3></button> </h1>
+            <h1 class="contDet" >Phone No. : <button mat-raised-button color="warn"><h3>{{ college.c_phoneNo }}</h3></button> </h1>
 
             <br><br>
 
             <i><h2 class="topic1 contDet" >Streams available at {{ college.c_name }} :</h2></i>
-            <div *ngFor="let dept of college.c_depts">
-              <h1 class="contDet1">{{ dept.deptName }}</h1>
+            <div *ngFor="let dept of college.c_depts" style="padding:10px;">
+              <button mat-raised-button color="primary"><h1 class="contDet1">{{ dept.deptName }}</h1></button>
             </div>
 
             <br><br>
             <i><h3 class="contDet"> Some notable clubs of the College :</h3></i>
 
-            <div *ngFor="let club of college.c_clubs">
-              <h1 class="contDet1" >{{ club }}</h1>
+            <div *ngFor="let club of college.c_clubs" style="padding:10px;">
+              <button mat-raised-button color="accent"><h1 class="contDet1" >{{ club }}</h1></button>
             </div>
 
         </div>
